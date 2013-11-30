@@ -1,9 +1,11 @@
 <?php
 /*
 Plugin Name: nbsp French
-Plugin URI: http://surniaulula.com/wordpress-plugins/nbsp-french/
+Plugin URI: http://surniaulula.com/extend/plugins/nbsp-french/
 Author: Jean-Sebastien Morisset
 Author URI: http://surniaulula.com/
+License: GPLv3
+License URI: http://surniaulula.com/wp-content/uploads/license/gpl.txt
 Description: Adds a non-breaking space between words and exclamation, question/interrogation marks. 
 Version: 1.0
 
