@@ -28,7 +28,7 @@ Adds a non-breaking space between words and exclamation, question/interrogation 
 *Manual*
 
 1. Download and unzip the plugin
-1. Upload the entire span-file-and-vars/ folder to the /wp-content/plugins/ directory
+1. Upload the entire nbsp-french/ folder to the /wp-content/plugins/ directory
 1. Activate the plugin through the Plugins menu in WordPress
 
 == Frequently Asked Questions ==
