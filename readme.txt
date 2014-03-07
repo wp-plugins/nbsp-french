@@ -1,6 +1,5 @@
 === nbsp French ===
 Contributors: jsmoriss
-Donate link: http://surniaulula.com/extend/plugins/contribution-form/
 Tags: nbsp, french, exclamation, question, interrogation, line-break
 License: GPLv2 or later
 Requires at least: 3.0
