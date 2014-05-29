@@ -10,11 +10,9 @@ Adds a non-breaking space between words and punctuation marks to avoid inappropr
 
 == Description ==
 
-Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French.
+Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French. Recognized punctuation: ! ? : ; &laquo; &raquo;
 
-By default, the plugin adds non-breaking spaces (where appropriate) within the whole content -- skipping over pre-formatted code and scripts -- but if the `<!--:fr-->` and `<!--:-->` HTML tags are found, non-breaking spaces are added only between these two tags.
-
-Recognized punctuation: ! ? : ; &laquo; &raquo;
+The plugin adds non-breaking spaces (where appropriate) within the whole content -- skipping over pre-formatted code and scripts -- but if the `<!--:fr-->` and the `<!--:-->` HTML tags are found, non-breaking spaces are added only between these two tags.
 
 == Installation ==
 
