@@ -7,7 +7,7 @@ Author URI: http://surniaulula.com/
 License: GPLv3
 License URI: http://surniaulula.com/wp-content/uploads/license/gpl.txt
 Description: Adds a non-breaking space between words and exclamation, question/interrogation marks. 
-Version: 1.0
+Version: 1.1
 
 Copyright 2012 - Jean-Sebastien Morisset - http://surniaulula.com/
 
@@ -27,15 +27,33 @@ add_filter( 'the_excerpt', 'nbsp_french' );
 add_filter( 'comment_text', 'nbsp_french' );
 
 function nbsp_french( $content ) {
-	$in_code = '';
 	$new_content = '';
-	// split content to exclude comments and javascript sections
+	$has_french = strpos( $content, '<!--:fr-->' ) ? false : true;
+
+	// split content to code sections, etc.
 	foreach ( preg_split( '/((\r?\n)|(\r\n?))/', $content) as $line) {
-		if ( preg_match( '/<(!--|script|pre)/i', $line ) ) $in_code = 1;
-		if ( preg_match( '/(--|\/script|\/pre)>/i', $line ) ) $in_code = 0;
-		if ( empty( $in_code ) ) {
-			$pattern = array( '/(\w) (\!|\?)/i' ); ksort($pattern);
-			$replace = array( '$1&nbsp;$2' ); ksort($replace);
+
+		if ( strpos( $line, '<!--:fr-->' ) )
+			$has_french = true;
+		elseif ( strpos( $line, '<!--:-->' ) )
+			$has_french = false;
+		elseif ( preg_match( '/<(!--|script|pre)/i', $line ) ) {
+			$has_french = false;
+			continue;
+		} elseif ( preg_match( '/(--|\/script|\/pre)>/i', $line ) ) {
+			$has_french = false;
+			continue;
+		}
+
+		if ( $has_french === true ) {
+			$pattern = array( 
+				'/(\«) (\w)/',
+				'/(\w) (\!|\?|\:|\;|\»)/'
+			); ksort($pattern);
+			$replace = array( 
+				'$1&nbsp;$2',
+				'$1&nbsp;$2'
+			); ksort($replace);
 			$line = preg_replace( $pattern, $replace, $line);
 		}
 		$new_content .= $line."\n";
