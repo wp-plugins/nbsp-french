@@ -6,7 +6,7 @@ Author: Jean-Sebastien Morisset
 Author URI: http://surniaulula.com/
 License: GPLv3
 License URI: http://surniaulula.com/wp-content/uploads/license/gpl.txt
-Description: Adds a non-breaking space between words and exclamation, question/interrogation marks. 
+Description: Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French.
 Version: 1.1
 
 Copyright 2012 - Jean-Sebastien Morisset - http://surniaulula.com/

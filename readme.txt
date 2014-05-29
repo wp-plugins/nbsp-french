@@ -3,7 +3,7 @@ Contributors: jsmoriss
 Tags: nbsp, french, exclamation, question, interrogation, line-break
 License: GPLv2 or later
 Requires at least: 3.0
-Tested up to: 3.7.1
+Tested up to: 3.9.1
 Stable tag: 1.1
 
 Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French.
