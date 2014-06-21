@@ -29,7 +29,7 @@ The plugin adds non-breaking spaces (where appropriate) within the whole content
 *Manual*
 
 1. Download and unzip the plugin
-1. Upload the entire nbsp-french/ folder to the /wp-content/plugins/ directory
+1. Upload the entire `nbsp-french/` folder to the `wp-content/plugins/` directory
 1. Activate the plugin through the Plugins menu in WordPress
 
 == Frequently Asked Questions ==
