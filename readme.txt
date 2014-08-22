@@ -10,9 +10,16 @@ Adds a non-breaking space between words and punctuation marks to avoid inappropr
 
 == Description ==
 
-Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French. Recognized punctuation: ! ? : ; &laquo; &raquo;
+Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French. Recognized punctuation:
 
-The plugin adds non-breaking spaces (where appropriate) within the whole content -- skipping over pre-formatted code and scripts -- but if the `<!--:fr-->` and the `<!--:-->` HTML tags are found, non-breaking spaces are added only between these two tags.
+* !
+* ?
+* :
+* ;
+* &laquo;
+* &raquo;
+
+The plugin will add non-breaking spaces where appropriate in the content, excerpt, and comment text &mdash; skipping over pre-formatted code blocks and scripts &mdash; and if the `<!--:fr-->` HTML  tag is found, non-breaking spaces are only added between the `<!--:fr-->` and `<!--:-->` HTML tags.
 
 == Installation ==
 
@@ -36,6 +43,13 @@ The plugin adds non-breaking spaces (where appropriate) within the whole content
 
 == Changelog ==
 
+= Version 1.2 =
+
+* Bugfixes
+	* Fixed the detection of comment, javascript, and pre-formatted text start/end blocks.
+* Enhancements
+	* *None*
+
 = Version 1.1 =
 
 * Bugfixes
@@ -43,4 +57,10 @@ The plugin adds non-breaking spaces (where appropriate) within the whole content
 * Enhancements
 	* Added detection of `<!--:fr-->` and `<!--:-->` to insert `&nbsp;` only between these tags.
 	* Added support for the colon, semi-colon, and double angle quotation marks (props X-Raym).
+
+== Upgrade Notice ==
+
+= 1.2 =
+
+Fixed the detection of comment, javascript, and pre-formatted text start/end blocks.
 
