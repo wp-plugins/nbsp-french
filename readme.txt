@@ -1,10 +1,11 @@
 === nbsp French ===
 Contributors: jsmoriss
 Tags: nbsp, french, exclamation, question, interrogation, line-break
-License: GPLv2 or later
-Requires at least: 3.0
-Tested up to: 3.9.1
-Stable tag: 1.2
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl.txt
+Requires At Least: 3.0
+Tested Up To: 4.0
+Stable Tag: 1.2
 
 Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French.
 
