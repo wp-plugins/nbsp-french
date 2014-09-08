@@ -5,7 +5,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
 Tested Up To: 4.0
-Stable Tag: 1.3
+Stable Tag: 1.4
 
 Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French.
 
@@ -45,6 +45,13 @@ The plugin will add non-breaking spaces where appropriate in the content, excerp
 
 == Changelog ==
 
+= Version 1.4 =
+
+* Bugfixes
+	* *None*
+* Enhancements
+	* Added the NGFB French filter to 'widget_text' as well.
+
 = Version 1.3 =
 
 * Bugfixes
@@ -68,6 +75,10 @@ The plugin will add non-breaking spaces where appropriate in the content, excerp
 	* Added support for the colon, semi-colon, and double angle quotation marks (props X-Raym).
 
 == Upgrade Notice ==
+
+= 1.4 =
+
+Added the NGFB French filter to 'widget_text' as well.
 
 = 1.3 =
 
