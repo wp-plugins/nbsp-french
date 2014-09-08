@@ -21,7 +21,7 @@ Adds a non-breaking space between words and punctuation marks to avoid inappropr
 * &laquo;
 * &raquo;
 
-The plugin will add non-breaking spaces where appropriate in the content, excerpt, and comment text &mdash; skipping over pre-formatted code blocks and scripts &mdash; and if the `<!--:fr-->` HTML  tag is found, non-breaking spaces are only added between the `<!--:fr-->` and `<!--:-->` HTML tags.
+The plugin will add non-breaking spaces where appropriate in the content, excerpt, comments, and text widget &mdash; skipping over pre-formatted code blocks and scripts &mdash; and if the `<!--:fr-->` HTML  tag is found, non-breaking spaces are only added between the `<!--:fr-->` and `<!--:-->` HTML tags.
 
 == Installation ==
 
