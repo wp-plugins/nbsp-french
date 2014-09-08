@@ -1,15 +1,15 @@
 <?php
 /*
-Plugin Name: nbsp French
+Plugin Name: NBSP French
 Plugin URI: http://surniaulula.com/extend/plugins/nbsp-french/
 Author: Jean-Sebastien Morisset
 Author URI: http://surniaulula.com/
 License: GPLv3
 License URI: http://surniaulula.com/wp-content/uploads/license/gpl.txt
 Description: Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French.
-Version: 1.2
+Version: 1.3
 
-Copyright 2012 - Jean-Sebastien Morisset - http://surniaulula.com/
+Copyright 2012-2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 
 This script is free software; you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
@@ -61,7 +61,7 @@ function nbsp_french( $content ) {
 		if ( $has_french === true ) {
 			$pattern = array( 
 				'/(\«) (\w)/',
-				'/(\w) (\!|\?|\:|\;|\»)/'
+				'/(\w) (\!|\?|\:|\;|\»|\%)/'
 			); ksort($pattern);
 			$replace = array( 
 				'$1&nbsp;$2',
@@ -69,7 +69,6 @@ function nbsp_french( $content ) {
 			); ksort($replace);
 			$line = preg_replace( $pattern, $replace, $line);
 		}
-
 		$new_content .= $line."\n";
 	} 
 

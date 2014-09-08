@@ -1,4 +1,4 @@
-=== nbsp French ===
+=== NBSP French ===
 Contributors: jsmoriss
 Tags: nbsp, french, exclamation, question, interrogation, line-break
 License: GPLv3
@@ -17,6 +17,7 @@ Adds a non-breaking space between words and punctuation marks to avoid inappropr
 * ?
 * :
 * ;
+* %
 * &laquo;
 * &raquo;
 
@@ -29,7 +30,7 @@ The plugin will add non-breaking spaces where appropriate in the content, excerp
 1. Login to your weblog
 1. Go to Plugins
 1. Select Add New
-1. Search for *nbsp French*
+1. Search for *NBSP French*
 1. Select Install
 1. Select Install Now
 1. Select Activate Plugin
@@ -43,6 +44,13 @@ The plugin will add non-breaking spaces where appropriate in the content, excerp
 == Frequently Asked Questions ==
 
 == Changelog ==
+
+= Version 1.3 =
+
+* Bugfixes
+	* *None*
+* Enhancements
+	* Added support for the percentage character.
 
 = Version 1.2 =
 
@@ -61,7 +69,7 @@ The plugin will add non-breaking spaces where appropriate in the content, excerp
 
 == Upgrade Notice ==
 
-= 1.2 =
+= 1.3 =
 
-Fixed the detection of comment, javascript, and pre-formatted text start/end blocks.
+Added support for the percentage character.
 
