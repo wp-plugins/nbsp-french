@@ -50,7 +50,7 @@ The plugin will add non-breaking spaces where appropriate in the content, excerp
 * Bugfixes
 	* *None*
 * Enhancements
-	* Added the NGFB French filter to 'widget_text' as well.
+	* Added the NBSP French filter to 'widget_text' as well.
 
 = Version 1.3 =
 
@@ -78,7 +78,7 @@ The plugin will add non-breaking spaces where appropriate in the content, excerp
 
 = 1.4 =
 
-Added the NGFB French filter to 'widget_text' as well.
+Added the NBSP French filter to 'widget_text' as well.
 
 = 1.3 =
 
