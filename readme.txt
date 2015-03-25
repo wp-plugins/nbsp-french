@@ -5,7 +5,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
 Tested Up To: 4.1.1
-Stable Tag: 1.4
+Stable Tag: 1.5
 
 Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French.
 
