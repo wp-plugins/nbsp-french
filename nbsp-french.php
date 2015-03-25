@@ -7,7 +7,7 @@ Author URI: http://surniaulula.com/
 License: GPLv3
 License URI: http://surniaulula.com/wp-content/uploads/license/gpl.txt
 Description: Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French.
-Version: 1.4
+Version: 1.5
 
 Copyright 2012-2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 
@@ -22,52 +22,55 @@ PARTICULAR PURPOSE. See the GNU General Public License for more details at
 http://www.gnu.org/licenses/.
 */
 
-add_filter( 'the_content', 'nbsp_french' );
-add_filter( 'the_excerpt', 'nbsp_french' );
-add_filter( 'comment_text', 'nbsp_french' );
-add_filter( 'widget_text', 'nbsp_french' );
+if ( ! defined( 'NBSP_FRENCH_FILTER_PRIORITY' ) )
+	define( 'NBSP_FRENCH_FILTER_PRIORITY', 100 );
+
+add_filter( 'the_content', 'nbsp_french_filter', NBSP_FRENCH_FILTER_PRIORITY );
+add_filter( 'the_excerpt', 'nbsp_french_filter', NBSP_FRENCH_FILTER_PRIORITY );
+add_filter( 'comment_text', 'nbsp_french_filter', NBSP_FRENCH_FILTER_PRIORITY );
+add_filter( 'widget_text', 'nbsp_french_filter', NBSP_FRENCH_FILTER_PRIORITY );
 
 function nbsp_french( $content ) {
 	$new_content = '';
 	$has_french = strpos( $content, '<!--:fr-->' ) ? false : true;
 	$next_is_french = null;
+
+	// add newlines before and after script and pre code blocks
 	$content = preg_replace( '/\r?\n?<(!--|script|pre)/i', "\n".'<$1', $content );
 	$content = preg_replace( '/(--|\/script|\/pre)>\r?\n?/i', '$1>'."\n", $content );
 
-	// split content to code sections, etc.
 	foreach ( preg_split( '/((\r?\n)|(\r\n?))/', $content) as $line) {
 
-		if ( $has_french === false &&
-			$next_is_french === true ) {
+		if ( $has_french === false && $next_is_french === true ) {
 			$has_french = true;
 			$next_is_french = null;
 		}
 	
 		// newline is added before and after comments
-		if ( $has_french === false && 
-			strpos( $line, '<!--:fr-->' ) )
-				$has_french = true;
-		if ( $has_french === true && 
-			strpos( $line, '<!--:-->' ) )
-				$has_french = false;
+		if ( $has_french === false && strpos( $line, '<!--:fr-->' ) )
+			$has_french = true;
 
-		if ( $has_french === true &&
-			preg_match( '/<(!--|script|pre)/i', $line ) )
-				$has_french = false;
+		if ( $has_french === true && strpos( $line, '<!--:-->' ) )
+			$has_french = false;
+
+		if ( $has_french === true && preg_match( '/<(!--|script|pre)/i', $line ) )
+			$has_french = false;
 		
-		if ( $has_french === false &&
-			preg_match( '/(--|\/script|\/pre)>/i', $line ) )
-				$next_is_french = true;
+		if ( $has_french === false && preg_match( '/(--|\/script|\/pre)>/i', $line ) )
+			$next_is_french = true;
 
 		if ( $has_french === true ) {
+
 			$pattern = array( 
 				'/(\«) (\w)/',
 				'/(\w) (\!|\?|\:|\;|\»|\%)/'
 			); ksort($pattern);
+
 			$replace = array( 
 				'$1&nbsp;$2',
 				'$1&nbsp;$2'
 			); ksort($replace);
+
 			$line = preg_replace( $pattern, $replace, $line);
 		}
 		$new_content .= $line."\n";

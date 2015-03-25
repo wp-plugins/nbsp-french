@@ -45,6 +45,13 @@ The plugin will add non-breaking spaces where appropriate in the content, excerp
 
 == Changelog ==
 
+= Version 1.5 =
+
+* Bugfixes
+	* *None*
+* Enhancements
+	* Added support for an optional NBSP_FRENCH_FILTER_PRIORITY constant to change the default filter hook priority (default is 100).
+
 = Version 1.4 =
 
 * Bugfixes
@@ -75,6 +82,10 @@ The plugin will add non-breaking spaces where appropriate in the content, excerp
 	* Added support for the colon, semi-colon, and double angle quotation marks (props X-Raym).
 
 == Upgrade Notice ==
+
+= 1.5 =
+
+Added support for an optional NBSP_FRENCH_FILTER_PRIORITY constant.
 
 = 1.4 =
 
