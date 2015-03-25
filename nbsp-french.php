@@ -7,7 +7,7 @@ Author URI: http://surniaulula.com/
 License: GPLv3
 License URI: http://surniaulula.com/wp-content/uploads/license/gpl.txt
 Description: Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French.
-Version: 1.5
+Version: 1.5.1
 
 Copyright 2012-2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 
@@ -23,7 +23,7 @@ http://www.gnu.org/licenses/.
 */
 
 if ( ! defined( 'NBSP_FRENCH_FILTER_PRIORITY' ) )
-	define( 'NBSP_FRENCH_FILTER_PRIORITY', 100 );
+	define( 'NBSP_FRENCH_FILTER_PRIORITY', 10 );
 
 add_filter( 'the_content', 'nbsp_french_filter', NBSP_FRENCH_FILTER_PRIORITY );
 add_filter( 'the_excerpt', 'nbsp_french_filter', NBSP_FRENCH_FILTER_PRIORITY );
