@@ -1,7 +1,7 @@
 <h1>NBSP French</h1>
 
 <table>
-<tr><th align="right" valign="top" nowrap>Description Summary</th><td>Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.5.2</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.1.1</td></tr>
