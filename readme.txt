@@ -1,10 +1,12 @@
 === NBSP French ===
+Plugin Name: NBSP French
+Plugin Slug: nbsp-french
 Contributors: jsmoriss
 Tags: nbsp, french, exclamation, question, interrogation, line-break
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
-Tested Up To: 4.1.1
+Tested Up To: 4.2.2
 Stable Tag: 1.5.2
 
 Adds a non-breaking space between words and punctuation marks to avoid inappropriate line-breaks in French.
